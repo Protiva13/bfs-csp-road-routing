@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+*.pyc
+*.egg-info/
+data/*.gz
+outputs/*.json
+outputs/*/
+.report-work/
+.slides-work/
+.poster-work/
+.chart-data-*/
+posters/
+presentations/
+*.docx
+.publish-work/

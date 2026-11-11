@@ -1,0 +1,5 @@
+{
+  "blocked_edges": [[0, 1]],
+  "waypoint": 4,
+  "max_hops": 3
+}

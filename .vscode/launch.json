@@ -1,0 +1,50 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Step 6: paired synthetic experiment",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "route_study.benchmark",
+      "cwd": "${workspaceFolder}",
+      "args": ["run", "--data", "examples/tiny-roads.txt", "--suite", "examples/tiny-suite.json", "--output-dir", "outputs/vscode-comparison", "--repeats", "3", "--warmups", "1"],
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Step 5: CSP example",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "route_study",
+      "cwd": "${workspaceFolder}",
+      "args": ["--data", "examples/tiny-roads.txt", "--planner", "csp", "--constraints", "examples/constraints.json", "--source", "0", "--target", "3", "--output", "outputs/csp-example.json"],
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Step 4: constrained BFS example",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "route_study",
+      "cwd": "${workspaceFolder}",
+      "args": ["--data", "examples/tiny-roads.txt", "--planner", "constrained-bfs", "--constraints", "examples/constraints.json", "--source", "0", "--target", "3", "--output", "outputs/constrained-example.json"],
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Analyze roadNet-TX",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "route_study",
+      "cwd": "${workspaceFolder}",
+      "args": ["--analyze-only", "--output", "outputs/analysis.json"],
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Run BFS baseline",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "route_study",
+      "cwd": "${workspaceFolder}",
+      "args": ["--scenarios", "10", "--seed", "42"],
+      "console": "integratedTerminal"
+    }
+  ]
+}

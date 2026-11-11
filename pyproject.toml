@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "road-route-study"
+version = "0.1.0"
+description = "Reproducible BFS baseline for a later constraint-aware route study"
+requires-python = ">=3.10"
+dependencies = []
+
+[tool.setuptools.packages.find]
+include = ["route_study*"]
